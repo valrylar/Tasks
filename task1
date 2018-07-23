@@ -1,0 +1,56 @@
+<script>
+class Worker {
+	constructor(name, surname, rate, days) {
+    	this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
+    }
+    
+    get getName() {
+    	return this.name;
+    }
+    
+    set setName(stName) {
+    	this.name = stName;
+    }
+    
+    get getDays() {
+    	return this.days;
+    }
+    
+    set setDays(stDays) {
+    	this.days = stDays;
+    }
+    
+    get getSurname() {
+    	return this.surname;
+    }
+    
+    set setSurname(stSurname) {
+    	this.surname = stSurname;
+    }
+    
+    get getRate() {
+    	return this.rate;
+    }
+    
+    set setRate(stRate) {
+    	this.rate = stRate;
+    }
+    
+    getSalary() {
+    	var salary = this.getRate * this.getDays;
+        alert(salary);
+    }
+    
+    out() {
+    	alert("Работник " + this.getSurname + " " + this.getName + " работал " + this.getDays + " дней");
+    }
+}
+
+let obj1 = new Worker("Иван", "Иванов", 10 , 31 );
+obj1.getSalary();
+let obj2 = new Worker("Петр","Николаев",20, 12);
+obj2.getSalary();
+</script>
